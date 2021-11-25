@@ -1,0 +1,68 @@
+<div class="container">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="nombres" type="text" class="validate" required="" aria-required="true" />
+        <label for="nombres">Nombres</label>
+        <span class="helper-text" data-error="debe ingresar un nombre" data-success="correcto"></span>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="apellidos" type="text" class="validate" required="" aria-required="true"/>
+        <label for="apellidos">Apellidos</label>
+        <span class="helper-text" data-error="debe ingresar un apellido" data-success="correcto"></span>
+      </div>
+      <div class="input-field col s5">
+        <i class="material-icons prefix">closed_caption</i>
+        <input id="documento" type="number" class="validate" required="" aria-required="true"/>
+        <label for="documento">Documento</label>
+        <span class="helper-text" data-error="debe ingresar un documento" data-success="correcto"></span>
+      </div>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">phone</i>
+        <input id="telefono" type="number" class="validate" required="" aria-required="true" />
+        <label for="telefono">Teléfono</label>
+        <span class="helper-text" data-error="debe ingresar un telefono" data-success="correcto"></span>
+      </div>
+      <label>Tipo De Sexo</label>
+      <i class="material-icons prefix">wc</i>
+      <select class="browser-default col s3 green-text" required="" aria-required="true">
+        <option value="no especificado">No Especificar</option>
+        <option value="femenino">Femenino</option>
+        <option value="masculino">Masculino</option>
+      </select>
+      <div class="input-field col s8">
+        <i class="material-icons prefix">edit_location</i>
+        <input id="direccion" type="text" class="validate" required="" aria-required="true"/>
+        <label for="direccion">Dirección</label>
+        <span class="helper-text" data-error="debe ingresar una dirección" data-success="correcto"></span>
+      </div>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">explore</i>
+        <input id="ciudad" type="text" class="validate" required="" aria-required="true"/>
+        <label for="ciudad">Ciudad</label>
+        <span class="helper-text" data-error="ingrese ciudad de la ubicación" data-success="correcto"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s4">
+        <i class="material-icons prefix">lock_outline</i>
+        <input id="clave" name="clave" type="password" class="validate" required="" aria-required="true"/>
+        <label for="clave">Contraseña</label>
+        <span class="helper-text" data-error="la contraseña es obligatoria" data-success="correcto"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">mail</i>
+        <input id="email" type="email" class="validate" required="" aria-required="true"/>
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="El email es un campo requerido" data-success="correcto"></span>
+      </div>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+</div>
