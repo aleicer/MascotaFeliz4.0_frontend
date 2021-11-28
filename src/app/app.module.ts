@@ -12,15 +12,13 @@ import { BarraNavegacionComponent } from './nav-footer/barra-navegacion/barra-na
 import { PiePaginaComponent } from './nav-footer/pie-pagina/pie-pagina.component';
 import { ErrorComponent } from './nav-footer/error/error.component';
 import { InicioComponent } from './nav-footer/inicio/inicio.component';
+import {  FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientesComponent,
-    CrearClienteComponent,
-    EditarClienteComponent,
-    BuscarClienteComponent,
-    EliminarClienteComponent,
     BarraNavegacionComponent,
     PiePaginaComponent,
     ErrorComponent,
@@ -28,7 +26,9 @@ import { InicioComponent } from './nav-footer/inicio/inicio.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

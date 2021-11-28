@@ -1,26 +1,44 @@
 <header class="header" id="inicio">
-    
-    <div class="header-menu">
-        <div class="titulo-empresa">
-            <h4 class="titulo-cabecera">MASCOTA FELIZ</h4>
-        </div>
-        <nav class="menu-navegacion">
-            <a href="#inicio">INICIO</a>
-            <a href="#servicio">NUESTROS SERVICIOS</a>
-            <a href="#expertos">NUESTRA CLINICA</a>
-            <a href="contacto.html">CONTACTENOS</a>
-            <a href="login.html">INICIAR SESION</a>
-        </nav>
+  <div class="contenido__video">
+    <!--
+          autoplay: propiedad para que se reproduzca una ves que carga la página
+          loop: propiedad para el vídeo se repita infinitamente
+          muted: propiedad para que el vídeo no emita sonido
+          poster: propiedad que muestra una imagen hasta que cargue el vídeo
+        -->
+    <video
+      class="video"
+      autoplay="autoplay"
+      loop="loop"
+      muted="muted"
+      poster="images/artesano.png"
+    >
+      <!-- <source src="../../../assets/img/gato.mp4" type="video/mp4" /> -->
+    </video>
+  </div>
+  <div class="header-menu">
+    <div class="titulo-empresa">
+      <h4 class="titulo-cabecera">MASCOTA FELIZ</h4>
     </div>
-    <div class="contenedor head">
-        <div class="lateral">
-            <img src="../img/mascotaFeliz.jpg" alt="">
-            <h1 class="titulo-lateral">¡HOLA<br>PELUDITOS!</h1>
-            <p class="parrafo-lateral">
-                NUESTRAS MODERNAS INSTALACIONES ESTAN LISTAS PARA ATENDER LAS NECESIDADES
-                BASICAS Y AVANZADAS DE TU MASCOTA, DEJANOS SERVIRTE.
-            </p>
-        </div>
-
+    <nav class="menu-navegacion">
+      <ul class="right hide-on-med-and-down">
+        <li *ngIf="seInicioSesion"><a routerLink="/inicio">INICIO</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/productos/crear-producto">CREAR PRODUCTO</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/crear-cliente">CREAR CUENTA</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-clientes">LISTA CLIENTES</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">CERRAR SESION</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">INICIAR SESION</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="contenedor head">
+    <div class="lateral">
+      <img src="../../../assets/img/mascotaFeliz.jpg" alt="" />
+      <h1 class="titulo-lateral">¡HOLA<br />PELUDITOS!</h1>
+      <p class="parrafo-lateral">
+        NUESTRAS MODERNAS INSTALACIONES ESTAN LISTAS PARA ATENDER LAS
+        NECESIDADES BASICAS Y AVANZADAS DE TU MASCOTA, DEJANOS SERVIRTE.
+      </p>
     </div>
+  </div>
 </header>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CrearClienteComponent } from './crear-cliente.component';
+import { RecuperarClaveComponent } from './recuperar-clave.component';
 
-describe('CrearClienteComponent', () => {
-  let component: CrearClienteComponent;
-  let fixture: ComponentFixture<CrearClienteComponent>;
+describe('RecuperarClaveComponent', () => {
+  let component: RecuperarClaveComponent;
+  let fixture: ComponentFixture<RecuperarClaveComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CrearClienteComponent ]
+      declarations: [ RecuperarClaveComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CrearClienteComponent);
+    fixture = TestBed.createComponent(RecuperarClaveComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

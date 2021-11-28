@@ -17,6 +17,18 @@ const routes: Routes = [
     redirectTo:"/inicio"
   },
   {
+    path: "seguridad",
+    loadChildren: ()=>import("./modulos/seguridad/seguridad.module").then(x => x.SeguridadModule)
+  },
+  {
+    path: "administracion",
+    loadChildren: ()=>import("./modulos/administracion/administracion.module").then(x => x.AdministracionModule)
+  },
+  {
+    path: "productos",
+    loadChildren: ()=>import("./modulos/productos/productos.module").then(x => x.ProductosModule)
+  },
+  {
     path:"**",
     component: ErrorComponent
   }

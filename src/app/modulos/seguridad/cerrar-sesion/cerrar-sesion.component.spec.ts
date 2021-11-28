@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BarraNavegacionComponent } from './barra-navegacion.component';
+import { CerrarSesionComponent } from './cerrar-sesion.component';
 
-describe('BarraNavegacionComponent', () => {
-  let component: BarraNavegacionComponent;
-  let fixture: ComponentFixture<BarraNavegacionComponent>;
+describe('CerrarSesionComponent', () => {
+  let component: CerrarSesionComponent;
+  let fixture: ComponentFixture<CerrarSesionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BarraNavegacionComponent ]
+      declarations: [ CerrarSesionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BarraNavegacionComponent);
+    fixture = TestBed.createComponent(CerrarSesionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
