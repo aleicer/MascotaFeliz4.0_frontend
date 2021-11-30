@@ -24,6 +24,7 @@
     "cryptojs": "^2.5.3",
     "jquery": "^3.6.0",
     "materialize-css": "^1.0.0-rc.2",
+    "ngx-pagination": "^5.1.1",
     "popper.js": "^1.16.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",

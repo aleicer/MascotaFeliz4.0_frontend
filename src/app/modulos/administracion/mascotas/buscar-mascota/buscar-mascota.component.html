@@ -1,0 +1,61 @@
+<a routerLink="/administracion/crear-mascota" class="btn">Nueva mascota</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Especie
+            </th>
+            <th>
+                Raza
+            </th>
+            <th>
+                Sexo
+            </th>
+            <th>
+                foto
+            </th>
+            <th>
+                editar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros | paginate: { itemsPerPage: 2, currentPage: pagina }">
+            <td>
+                {{p.nombre}}
+            </td>
+            <td>
+                {{p.especie}}
+            </td>
+            <td>
+                {{p.raza}}
+            </td>
+            <td>
+                {{p.sexo}}
+            </td>
+            <td>
+                <img src="{{p.foto}}" class="fotoMascota" />
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-mascota/{{p.id}}" class="btn">Editar mascota</a>
+            </td>
+            <td>
+                <button class="waves-effect waves-light btn red" type="button" (click)="VerificarEliminacion(p.id, p.nombre)">
+                    <i class="material-icons right">Eliminar</i>
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls
+                      (pageChange)="pagina = ($event)"
+                      previousLabel="Anterior"
+                      nextLabel="Siguiente"
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page">
+</pagination-controls>
