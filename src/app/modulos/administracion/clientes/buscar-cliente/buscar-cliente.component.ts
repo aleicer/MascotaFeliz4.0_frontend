@@ -13,12 +13,22 @@ export class BuscarClienteComponent implements OnInit {
   constructor(private clienteServicio : ClienteService) { }
 
   ngOnInit(): void {
-  }
-
-  ObtenerListadoClientes(){
     this.clienteServicio.ObtenerRegistro().subscribe((datos: ModeloCliente[])=>{
       this.listadoRegistros = datos;
+    },(error) =>{
+      alert("Error listando datos")
     })
+  }
+
+  VerificarEliminacion(cliente: ModeloCliente){
+    if (window.confirm("Confirma que desea Eliminar este registro de " + cliente.nombre+ " "+ cliente.apellido+ " ?")){
+      this.clienteServicio.EliminarCliente(cliente).subscribe((datos) =>{
+        alert("El registro de "+ cliente.nombre+ " "+ cliente.apellido+ "se ha eliminado");
+        this.listadoRegistros = this.listadoRegistros.filter(x=> x.id != cliente.id);
+      },(Error)=>{
+        alert("Error eliminando el registro")
+      })
+    }
   }
 
 }

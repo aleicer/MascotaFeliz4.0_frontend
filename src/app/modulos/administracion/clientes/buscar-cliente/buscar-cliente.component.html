@@ -3,7 +3,6 @@
 <table class="table table-responsive">
   <thead>
     <tr>
-      <th>ID</th>
       <th>Nombres</th>
       <th>Apellidos</th>
       <th>Documento</th>
@@ -16,9 +15,6 @@
   </thead>
   <tbody>
       <tr *ngFor="let c of listadoRegistros">
-        <td>
-            {{c.id}}
-        </td>
         <td>
             {{c.nombre}}
         </td>
@@ -44,7 +40,12 @@
             {{c.correo}}
         </td>
         <td>
-            <a routerLink="/administracion/editar-cliente/{{c.id}}" class="btn">Editar Cliente</a>
+            <a routerLink="/administracion/editar-cliente/{{c.id}}" class="waves-effect waves-light btn-small">Editar Cliente</a>
+        </td>
+        <td>
+            <button class="waves-effect waves-light btn-small red" type="button" (click)="VerificarEliminacion(c)">Eliminar
+                <i class="large material-icons">delete</i>  
+            </button>
         </td>
       </tr>
   </tbody>

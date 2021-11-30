@@ -30,14 +30,16 @@ export class CrearClienteComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  GuardarProducto(){
+  GuardarCliente(){
     let c = new ModeloCliente();
+    let telefono = this.fgValidador.controls["telefono"].value;
+    let documento = this.fgValidador.controls["documento"].value;
     c.nombre= this.fgValidador.controls["nombres"].value;
     c.apellido = this.fgValidador.controls["apellidos"].value;
-    c.identificacion = this.fgValidador.controls["documento"].value;
+    c.identificacion = (documento).toString();
     c.sexo = this.fgValidador.controls["sexo"].value;
     c.direccion = this.fgValidador.controls["direccion"].value;
-    c.telefono = this.fgValidador.controls["telefono"].value;
+    c.telefono = (telefono).toString();
     c.ciudad = this.fgValidador.controls["ciudad"].value;
     c.clave = this.fgValidador.controls["clave"].value;
     c.correo = this.fgValidador.controls["correo"].value;
