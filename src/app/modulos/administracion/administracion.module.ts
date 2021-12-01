@@ -13,6 +13,7 @@ import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.co
 import { EditarMascotaComponent } from './mascotas/editar-mascota/editar-mascota.component';
 import { EliminarMascotaComponent } from './mascotas/eliminar-mascota/eliminar-mascota.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SolicitarAfiliacionComponent } from './productos/solicitar-afiliacion/solicitar-afiliacion.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BuscarMascotaComponent,
     CrearMascotaComponent,
     EditarMascotaComponent,
-    EliminarMascotaComponent
+    EliminarMascotaComponent,
+    SolicitarAfiliacionComponent
   ],
   imports: [
     CommonModule,
