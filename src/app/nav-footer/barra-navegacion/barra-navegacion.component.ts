@@ -6,7 +6,7 @@ import { SeguridadService } from 'src/app/servicios/seguridad.service';
 @Component({
   selector: 'app-barra-navegacion',
   templateUrl: './barra-navegacion.component.html',
-  styleUrls: ['../../app.component.css']
+  styleUrls: ['./barra-navegacion.component.css']
 })
 export class BarraNavegacionComponent implements OnInit {
 
