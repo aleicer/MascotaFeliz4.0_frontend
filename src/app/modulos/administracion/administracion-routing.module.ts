@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
 import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
 import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
-import { EliminarClienteComponent } from './clientes/eliminar-cliente/eliminar-cliente.component';
+import { BuscarMascotaComponent } from './mascotas/buscar-mascota/buscar-mascota.component';
+import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.component';
+import { EditarMascotaComponent } from './mascotas/editar-mascota/editar-mascota.component';
 
 const routes: Routes = [
   {
@@ -19,8 +21,16 @@ const routes: Routes = [
     component: EditarClienteComponent  
   },
   {
-    path: "eliminar-cliente/:id",
-    component: EliminarClienteComponent  
+    path: "listar-mascotas",
+    component: BuscarMascotaComponent
+  },
+  {
+    path: "crear-mascota",
+    component: CrearMascotaComponent
+  },
+  {
+    path: "editar-mascota/:id",
+    component: EditarMascotaComponent 
   }
 ];
 

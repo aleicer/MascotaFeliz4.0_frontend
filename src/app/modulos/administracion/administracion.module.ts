@@ -7,6 +7,12 @@ import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.co
 import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
 import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
 import { EliminarClienteComponent } from './clientes/eliminar-cliente/eliminar-cliente.component';
+import { MascotasComponent } from './mascotas/mascotas.component';
+import { BuscarMascotaComponent } from './mascotas/buscar-mascota/buscar-mascota.component';
+import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.component';
+import { EditarMascotaComponent } from './mascotas/editar-mascota/editar-mascota.component';
+import { EliminarMascotaComponent } from './mascotas/eliminar-mascota/eliminar-mascota.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -14,13 +20,19 @@ import { EliminarClienteComponent } from './clientes/eliminar-cliente/eliminar-c
     CrearClienteComponent,
     EditarClienteComponent,
     BuscarClienteComponent,
-    EliminarClienteComponent
+    EliminarClienteComponent,
+    MascotasComponent,
+    BuscarMascotaComponent,
+    CrearMascotaComponent,
+    EditarMascotaComponent,
+    EliminarMascotaComponent
   ],
   imports: [
     CommonModule,
     AdministracionRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ]
 })
 export class AdministracionModule { }

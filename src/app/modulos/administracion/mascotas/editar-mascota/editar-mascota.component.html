@@ -1,0 +1,50 @@
+<div class="row">
+    <h3 class="center-align">Editar mascota</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarMascota()" method="POST" action="formulario-contacto.php">
+            <input type="hidden" formControlName="id" />
+            <div class="input-field">
+                <label for="nombre" class="active">Nombre</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="especie" class="active">Especie</label>
+                <input formControlName="especie" type="text" name="especie" required>
+            </div>
+            <div class="input-field">
+                <label for="raza" class="active">Raza</label>
+                <input formControlName="raza" type="text" name="raza" required>
+            </div>
+            <div class="input-field">
+                <label for="color" class="active">Color</label>
+                <input formControlName="color" type="text" name="color" required>
+            </div>
+            <div class="input-field">
+                <label for="sexo" class="active">Sexo</label>
+                <input formControlName="sexo" type="text" name="sexo" required>
+            </div>
+            <div class="input-field">
+                <label for="fechaNac" class="active">Fecha nacimiento</label>
+                <input formControlName="fechaNac" type="text" name="fechaNac" required>
+            </div>
+            <div class="input-field">
+                <label for="peso" class="active">Peso</label>
+                <input formControlName="peso" type="text" name="peso" required>
+            </div>
+            <div class="input-field">
+                <label for="enfermedades" class="active">Enfermedades Preexistentes</label>
+                <input formControlName="enfermedades" type="text" name="enfermedades" required>
+            </div>
+            <div class="input-field">
+                <label for="foto" class="active">Foto</label>
+                <input formControlName="foto" type="text" name="foto" required>
+            </div>
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>
+                    Enviar
+                </button>
+            </p>
+        </form>
+    </article>
+</div>
