@@ -14,4 +14,7 @@ export class ModeloMascota{
     enfermedades?: string;
     obsEnfPre?: string;
     foto?: string;
+    clienteId?: string;
+    planId?: string;
+
 }

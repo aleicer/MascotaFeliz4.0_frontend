@@ -43,11 +43,11 @@ export class CrearClienteComponent implements OnInit {
     c.ciudad = this.fgValidador.controls["ciudad"].value;
     c.clave = this.fgValidador.controls["clave"].value;
     c.correo = this.fgValidador.controls["correo"].value;
-    c.idRol= "619511d0fda2f8337ccf426e";
+    c.rolId= "619511d0fda2f8337ccf426e";
     this.servicioCliente.CrearCliente(c).subscribe((datos: ModeloCliente)=>{
-      alert("Usuario Creado");
+      alert("Usuario Creado con ID "+ datos.id);
       this.router.navigate(["/administracion/buscar-clientes"]);
-    }),(error : any)=>{
+    }),(Error : any)=>{
       alert("Error al crear Usuario");
     }
 

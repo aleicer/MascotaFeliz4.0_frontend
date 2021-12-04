@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ModeloMascota } from '../modelos/mascota.modelo';
+import { ModelFormularioInscripcion } from '../modelos/formulario-inscripcion';
 import { SeguridadService } from './seguridad.service';
 
 @Injectable({
@@ -42,6 +43,14 @@ export class MascotaService {
 
   EliminarMascota(modelo: ModeloMascota): Observable<any>{
     return this.http.delete(`${this.url}/mascotas/${modelo.id}`, {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.token}`
+      })
+    })
+  }
+
+  CrearFormularioInscripcion(formulario: ModelFormularioInscripcion){
+    return this.http.post<ModelFormularioInscripcion>(`${this.url}/formulario-inscripcion`, formulario, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })

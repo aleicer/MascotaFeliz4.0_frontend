@@ -23,7 +23,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let p of listadoRegistros | paginate: { itemsPerPage: 2, currentPage: pagina }">
+        <tr *ngFor="let p of listadoRegistros | paginate: { itemsPerPage: 5, currentPage: pagina }">
             <td>
                 {{p.nombre}}
             </td>
@@ -44,8 +44,8 @@
             </td>
             <td>
                 <button class="waves-effect waves-light btn red" type="button" (click)="VerificarEliminacion(p.id, p.nombre)">
-                    <i class="material-icons right">Eliminar</i>
-                    Delete
+                    <i class="material-icons right">delete</i>
+                    Eliminar
                 </button>
             </td>
         </tr>

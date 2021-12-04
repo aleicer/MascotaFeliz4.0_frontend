@@ -27,8 +27,16 @@
                 <input formControlName="fechaNac" type="text" name="fechaNac" required>
             </div>
             <div class="input-field">
+                <label for="seniales" class="active" >Aspecto</label>
+                <input formControlName="seniales" type="text" name="seniales" required placeholder="describe la apariencia de tu mascota ">
+            </div>
+            <div class="input-field">
+                <label for="alimento" class="active" >Tipo de alimento</label>
+                <input formControlName="alimento" type="text" name="alimento" required>
+            </div>
+            <div class="input-field">
                 <label for="peso">Peso</label>
-                <input formControlName="peso" type="text" name="peso" required>
+                <input formControlName="peso" type="number" name="peso" required>
             </div>
             <div class="input-field">
                 <label for="enfermedades">Enfermedades Preexistentes</label>
@@ -38,8 +46,19 @@
                 <label for="foto">Foto</label>
                 <input formControlName="foto" type="text" name="foto" required>
             </div>
+            <div>
+                <select formControlName="planId" class="browser-default green-text" required="" aria-required="true">
+                    <option value="618d788df69a892d14e4d021">Plan Bienestar</option>
+                    <option value="61981f05f858a42584d1537a">Plan Elite</option>
+                    <option value="61a6daa30847550e30da75bb">Plan Diamante</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="observacionesCliente">Alguna Observacion sobre tu marcosta?</label>
+                <input formControlName="observacionesCliente" type="text" name="observacionesCliente" >
+            </div>
             <p class="center-align">
-                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                <button [disabled]="!fgValidador.valid" class=" btn waves-effect waves-light btn" type="submit">
                     <i class="material-icons right">send</i>
                     Enviar
                 </button>

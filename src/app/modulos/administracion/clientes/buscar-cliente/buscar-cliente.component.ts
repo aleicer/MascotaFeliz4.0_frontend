@@ -9,6 +9,7 @@ import { ClienteService } from 'src/app/servicios/cliente.service';
 })
 export class BuscarClienteComponent implements OnInit {
 
+  pagina: number = 1;
   listadoRegistros: ModeloCliente[]=[];
   constructor(private clienteServicio : ClienteService) { }
 

@@ -9,5 +9,5 @@ export class ModeloCliente{
     telefono?:string;
     correo?: string;
     clave?: string;
-    idRol?: string;
+    rolId?: string;
 }
