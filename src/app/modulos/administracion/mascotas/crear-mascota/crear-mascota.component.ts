@@ -43,7 +43,7 @@ export class CrearMascotaComponent implements OnInit {
     /*CREACION MODELO MASCOTA*/
     m.nombre= this.fgValidador.controls["nombre"].value;
     m.estadoAfiliacion = "Pendiente";
-    m.motivoInactivo = "Ninguno"
+    m.motivoInactivo = "Ninguno";
     m.especie = this.fgValidador.controls["especie"].value;
     m.raza = this.fgValidador.controls["raza"].value;
     m.color = this.fgValidador.controls["color"].value;
