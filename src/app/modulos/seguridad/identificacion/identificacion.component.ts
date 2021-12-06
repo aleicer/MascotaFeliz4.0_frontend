@@ -7,7 +7,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-identificacion',
   templateUrl: './identificacion.component.html',
-  styleUrls: ['./identificacion.component.css']
+  styleUrls: []
 })
 export class IdentificacionComponent implements OnInit {
 

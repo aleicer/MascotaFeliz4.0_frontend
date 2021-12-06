@@ -1,0 +1,52 @@
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombre Acudiente
+            </th>
+            <th>
+                Nombre Mascota
+            </th>
+            <th>
+                Especie
+            </th>
+            <th>
+                Estado de afiliacion
+            </th>
+            <th>
+                Observaciones Acudiente
+            </th>
+            <th>
+                Colaborador a Cargo
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let f of listadoSolicitudes">
+            <td>
+                {{f.mascotaId}}
+            </td>
+            <td>
+                {{f.mascotaId}}
+            </td>
+            <td>
+               
+            </td>
+            <td>
+                {{f.observacionesCliente}}
+            </td>
+            <td>
+                {{f.observacionesEmpleado}}
+            </td>
+            <td>
+                <a class="btn">Editar mascota</a>
+            </td>
+            <td>
+                <button class="waves-effect waves-light btn red" type="button" >
+                    <i class="material-icons right">delete</i>
+                    Eliminar
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

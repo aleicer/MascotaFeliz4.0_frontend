@@ -1,90 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* --------------------- Barra de navegación ------------------------- */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.404) 0%, rgba(255, 255, 255, 0.404) 100%);/*, url("https://fondosmil.com/fondo/20093.jpg");*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: 'Architects Daughter', cursive;
-}
-
-
-
-
-/* Footer */
-
-footer{
-    background: #B5E48C;
-    width: 100%;   
-}
-
-.footer-content{
+body > app-root{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 60px;
-    padding-bottom: 40px;
-}
+    min-height: 100vh;
+    flex-direction: column;
+  }
 
-.contact-us{
-    width: 40%;
-    color: #000;
-}
-
-.brand{
-    font-weight: 500;
-    font-size: 30px;
-}
-
-.brand+p{
-    font-weight: 500;
-}
-
-.social-media{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.social-media-icon{
-    display: inline-block;
-    margin-left: 20px;
-    width: 60px;
-    height: 60px;
-    border: 1px solid #000;
-    border-radius: 50%;
-    text-align: center;
-    color: #000;
-}
-
-.social-media-icon:hover{
-    background: #000;
-    color: #fff;
-}
-
-.social-media-icon i{
-    font-size: 30px;
-    line-height: 60px;
-    margin-left: 10px;
-}
-
-.line{
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 2px;
-    background: #000;
-    margin-bottom: 60px;
-}
-
-/*-------------------------------------------------------*/
+  main {
+    flex: 1 0 auto;
+  }

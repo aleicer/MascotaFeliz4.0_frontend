@@ -1,3 +1,5 @@
+import { ModeloCliente } from "./cliente.modelo";
+
 export class ModeloMascota{
     id?: string;
     nombre?: string;

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
+import { IdentificacionColaboradoresComponent } from './identificacion-colaboradores/identificacion-colaboradores.component';
 import { IdentificacionComponent } from './identificacion/identificacion.component';
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: "cerrar-sesion",
     component: CerrarSesionComponent
+  },
+  {
+    path:'identificacion-colaborador',
+    component: IdentificacionColaboradoresComponent
   }
 ];
 
