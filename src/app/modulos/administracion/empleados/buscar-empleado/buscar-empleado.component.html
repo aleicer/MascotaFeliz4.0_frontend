@@ -1,0 +1,76 @@
+<a routerLink="/administracion/crear-empleado" class="btn">Nuevo empleado</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Identificación
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Fecha Inicio
+            </th>
+            <th>
+                Cargo
+            </th>
+            <th>
+                Departamento
+            </th>
+            <th>
+                Ciudad
+            </th>
+            <th>
+                Correo
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros | paginate: { itemsPerPage: 5, currentPage: pagina }">
+            <td>
+                {{p.identificacion}}
+            </td>
+            <td>
+                {{p.nombre}}
+            </td>
+            <td>
+                {{p.apellido}}
+            </td>
+            <td>
+                {{p.fechaInicio}}
+            </td>
+            <td>
+                {{p.cargo}}
+            </td>
+            <td>
+                {{p.departamento}}
+            </td>
+            <td>
+                {{p.ciudad}}
+            </td>
+            <td>
+                {{p.correo}}
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-empleado/{{p.id}}" class="btn">Editar empleado</a>
+            </td>
+            <td>
+                <button class="waves-effect waves-light btn red" type="button" (click)="VerificarEliminacion(p.id, p.nombre)">
+                    <i class="material-icons right">delete</i>
+                    Eliminar
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls
+                      (pageChange)="pagina = ($event)"
+                      previousLabel="Anterior"
+                      nextLabel="Siguiente"
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page">
+</pagination-controls>

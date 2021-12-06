@@ -1,0 +1,63 @@
+<div class="row">
+    <h3 class="center-align">Editar empleado</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarEmpleado()" method="PUT" action="formulario-contacto.php">
+            <input type="hidden" formControlName="id" />
+            <div class="input-field">
+              <label for="identificacion" class="active">Identificacion</label>
+              <input formControlName="identificacion" type="text" name="identificacion" required>
+            </div>
+            <div class="input-field">
+                <label for="nombre" class="active">Nombres</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="apellido" class="active">Apellidos</label>
+                <input formControlName="apellido" type="text" name="apellido" required>
+            </div>
+            <div class="input-field">
+                <label for="fechaInicio" class="active">Fecha de inicio</label>
+                <input formControlName="fechaInicio" type="text" name="fechaInicio" required>
+            </div>
+            <div class="input-field">
+                <label for="cargo" class="active">Cargo</label>
+                <input formControlName="cargo" type="text" name="cargo" required>
+            </div>
+            <div class="input-field">
+                <label for="departamento" class="active">Departamento</label>
+                <input formControlName="departamento" type="text" name="departamento" required>
+            </div>
+            <div class="input-field">
+                <label for="nivel" class="active">Nivel</label>
+                <input formControlName="nivel" type="text" name="nivel" required>
+            </div>
+            <div class="input-field">
+                <label for="foto" class="active" >Foto</label>
+                <input formControlName="foto" type="text" name="foto">
+            </div>
+            <div class="input-field">
+                <label for="direccion" class="active" >Dirección</label>
+                <input formControlName="direccion" type="text" name="direccion" required>
+            </div>
+            <div class="input-field">
+                <label for="ciudad" class="active">Ciudad</label>
+                <input formControlName="ciudad" type="text" name="ciudad" required>
+            </div>
+            <div class="input-field">
+                <label for="sexo" class="active">Sexo</label>
+                <input formControlName="sexo" type="text" name="sexo" required>
+            </div>
+            <div class="input-field">
+              <label for="correo" class="active">Correo</label>
+              <input formControlName="correo" type="text" name="correo" required>
+          </div>
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class=" btn waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>
+                    Enviar
+                </button>
+                <a routerLink="/administracion/listar-empleados" class="btn btn-cancelar">Cancelar</a>
+            </p>
+        </form>
+    </article>
+  </div>
