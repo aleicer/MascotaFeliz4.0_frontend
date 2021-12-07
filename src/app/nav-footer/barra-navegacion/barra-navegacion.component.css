@@ -1,16 +1,16 @@
 
 body {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.404) 0%, rgba(255, 255, 255, 0.404) 100%);/*, url("https://fondosmil.com/fondo/20093.jpg");*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: 'Architects Daughter', cursive;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.404) 0%, rgba(255, 255, 255, 0.404) 100%) !important;/*, url("https://fondosmil.com/fondo/20093.jpg");*/
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    font-family: 'Architects Daughter', cursive !important;
 }
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
 nav{
@@ -20,13 +20,13 @@ nav{
 
 .brand-logo{
     margin-left: 120px !important;
-    top: 15%;
-    font-size: 20px;  
+    top: 15% !important;
+    font-size: 20px !important;  
 }
 
 .right{
     margin-top: 40px !important;
-    margin-right: 10px;
+    margin-right: 10px !important;
 }
 
 .right li{
@@ -35,5 +35,5 @@ nav{
 
 .right li a{
     border-radius: 10px !important;
-    padding: 6px;
+    padding: 6px !important;
 }

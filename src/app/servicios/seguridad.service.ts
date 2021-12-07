@@ -29,8 +29,20 @@ export class SeguridadService {
     return this.datosUsuarioEnSesion.asObservable();
   }
 
+  //llamado identificacion de cliente 
   Identificar(usuario: string, clave: string): Observable<ModeloIdentificacion>{
     return this.http.post<ModeloIdentificacion>(`${this.url}/identificarCliente`,{
+        usuario: usuario,
+        clave: clave
+        },{
+          headers: new HttpHeaders({
+            })
+        })
+  }
+  
+  //peticion para llado identificacion empleado
+  IdentificarEmpleado(usuario: string, clave: string): Observable<ModeloIdentificacion>{
+    return this.http.post<ModeloIdentificacion>(`${this.url}/identificarAdministrador-empleado`,{
         usuario: usuario,
         clave: clave
         },{
@@ -81,6 +93,16 @@ export class SeguridadService {
     if(datosString){
       let datos = JSON.parse(datosString)
       return datos.datos.id;
+    }else{
+      return "";
+    }
+  }
+
+  ObtenerRol(){
+    let datosString = localStorage.getItem("datosSesion");
+    if(datosString){
+      let datos = JSON.parse(datosString)
+      return datos.datos.rol;
     }else{
       return "";
     }

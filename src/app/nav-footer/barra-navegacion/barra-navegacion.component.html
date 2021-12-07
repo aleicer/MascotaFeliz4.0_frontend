@@ -1,15 +1,54 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">MASCOTA FELIZ</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li *ngIf="seInicioSesion"><a routerLink="/inicio">INICIO</a></li>
-      <li *ngIf="seInicioSesion"><a routerLink="/productos/crear-producto">CREAR PRODUCTO</a></li>
-      <li *ngIf="seInicioSesion"><a routerLink="/administracion/crear-cliente">CREAR CUENTA</a></li>
-      <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-clientes">LISTA CLIENTES</a></li>
-      <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-mascotas">MASCOTAS</a></li>
-      <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-empleados">EMPLEADOS</a></li>
-      <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">CERRAR SESION</a></li>
-      <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">INICIAR SESION</a></li>
-    </ul>
+        <a href="#" class="brand-logo">MASCOTA FELIZ</a>
+        <div [ngSwitch]="this.rol" >
+          <!-- INICIO SESION ADMINISTRADOR -->
+          <ul *ngSwitchCase="1" id="nav-mobile" class="right hide-on-med-and-down">
+            <li *ngIf="seInicioSesion"><a routerLink="/inicio">INICIO</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/productos/crear-producto">CREAR PRODUCTO</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/administracion/crear-cliente">CREAR CUENTA</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/administracion/buscar-clientes">LISTA CLIENTES</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-mascotas">MASCOTAS</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-empleados">EMPLEADOS</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">CERRAR SESION</a></li>
+            <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">INICIAR SESION</a></li>
+          </ul>
+          <!-- INICIO SESION EMPLEADO -->
+          <ul *ngSwitchCase="2" id="nav-mobile" class="right hide-on-med-and-down">
+            <li *ngIf="seInicioSesion"><a routerLink="/inicio">INICIO</a></li>
+            <!-- <li *ngIf="seInicioSesion"><a  routerLink="/productos/crear-producto">CREAR PRODUCTO</a></li> -->
+            <li *ngIf="seInicioSesion"><a  routerLink="/administracion/crear-cliente">CREAR CUENTA</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/administracion/buscar-clientes">LISTA CLIENTES</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-mascotas">MASCOTAS</a></li>
+            <!-- <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-empleados">EMPLEADOS</a></li> -->
+            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">CERRAR SESION</a></li>
+            <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">INICIAR SESION</a></li>
+          </ul>
+          <!-- INICIO SESION CLIENTE -->
+          <ul *ngSwitchCase="3" id="nav-mobile" class="right hide-on-med-and-down">
+            <li *ngIf="seInicioSesion"><a routerLink="/inicio">INICIO</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/productos/crear-producto">CREAR PRODUCTO</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/administracion/crear-cliente">CREAR CUENTA</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/administracion/buscar-clientes">LISTA CLIENTES</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-mascotas">MASCOTAS</a></li>
+            <!-- <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-empleados">EMPLEADOS</a></li> -->
+            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">CERRAR SESION</a></li>
+            <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">INICIAR SESION</a></li>
+          </ul>
+          <ul *ngSwitchDefault="0" id="nav-mobile" class="right hide-on-med-and-down">
+            <li *ngIf="seInicioSesion"><a routerLink="/inicio">INICIO</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/productos/crear-producto">CREAR PRODUCTO</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/administracion/crear-cliente">CREAR CUENTA</a></li>
+            <li *ngIf="seInicioSesion"><a  routerLink="/administracion/buscar-clientes">LISTA CLIENTES</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-mascotas">MASCOTAS</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-empleados">EMPLEADOS</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">CERRAR SESION</a></li>
+            <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">INICIAR SESION</a></li>
+          </ul>
+        </div>
+        
   </div>
 </nav>
+    
+    
+  
