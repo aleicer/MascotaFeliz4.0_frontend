@@ -7,7 +7,7 @@
 }
 
 .lateral{
-    width: 35%;
+    width: 45%;
     height: 100%;
     color: #000;
     background-image: linear-gradient(to top, rgba(165, 165, 164, 0.6) 0%, rgba(181, 182, 179, 0.6) 100%);
@@ -196,3 +196,79 @@
     max-width: 300%;
     width: 100%;
    }
+
+   /*------------ Responsive design -----------------*/
+
+@media screen and (max-width:992px){
+
+    .lateral{
+        width: 70%;
+        height: 100%;
+        color: #000;
+        background-image: linear-gradient(to top, rgba(165, 165, 164, 0.6) 0%, rgba(181, 182, 179, 0.6) 100%);
+    }
+    
+    .lateral img{
+        width: 200px !important;
+        height: 200px !important;
+        margin-left: 20%;
+        margin-top: 30px;
+        left: 10%;
+        border-radius: 10px;
+    }
+    
+    .lateral h1{
+        margin-left: 15%;
+        font-weight: 200;
+        font-size: 30px;
+    }
+    
+    .lateral p{
+        margin-left: 15%;
+        width: 60%;
+        padding-bottom: 40px;
+    }
+
+    .cont-expert{
+        position: relative;
+        width: 60% !important;
+        padding-top: 10px;
+    }
+
+    .experts{
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+
+    .n-expert{
+        display: inline-block;
+        margin-top: 20px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 30px !important;
+    }
+
+    .contenedor .row{
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+
+    .contenedor .row #productos{
+        width: 80% !important;
+        padding-left: 20% !important;
+        padding-top: 10px !important;
+    }
+
+}
+
+@media screen and (max-width:660px){
+    main{
+        width: 1000px !important;
+    }
+
+    section{
+        width: 1000px !important;
+    }
+
+}
+

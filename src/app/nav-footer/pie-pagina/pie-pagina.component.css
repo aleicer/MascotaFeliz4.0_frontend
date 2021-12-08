@@ -49,3 +49,12 @@ footer{
     margin-bottom: 60px;
 }
 
+/* --------------- Responsive Design -------------------*/
+
+@media screen and (max-width:660px){
+    footer{
+        width: 1000px !important;
+    }
+
+
+}
