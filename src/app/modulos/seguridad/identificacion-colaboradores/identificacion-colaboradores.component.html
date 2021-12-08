@@ -9,6 +9,18 @@
                   <div class="row login">
                       <h4>Ingreso Colaboradores.</h4>
                     <form [formGroup]="fgValidador" class="col s12">
+                      <p>
+                        <label>
+                          <input name="chequeo" type="checkbox" />
+                          <span>Soy Administrador</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="chequeo" type="checkbox" checked="checked" />
+                          <span>Soy Colaborador</span>
+                        </label>
+                      </p>
                       <div class="row">
                          <div class="input-field col m12 s12">
                           <i class="material-icons iconis prefix">account_box</i>
