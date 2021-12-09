@@ -16,6 +16,7 @@ body {
 nav{
     background-color: rgba(52, 160, 164, .9) !important;
     padding-bottom: 120px !important;
+    font-family: 'Architects Daughter', cursive !important;
 }
 
 .brand-logo{
