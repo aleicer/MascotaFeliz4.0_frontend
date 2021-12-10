@@ -1,1 +1,47 @@
-<p>buscar-plan works!</p>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+               Descripcion
+            </th>
+            <th>
+                Precio
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoPlanes | paginate: { itemsPerPage: 5, currentPage: pagina }">
+            <td>
+                {{p.nombre}}
+            </td>
+            <td>
+                {{p.descripcion}}
+            </td>
+            <td>
+                {{p.precio}}
+            </td>
+            
+            <td>
+                <a routerLink="/productos/editar-plan/{{p.id}}" class="btn">Editar Plan</a>
+            </td>
+            <td>
+                <button class="waves-effect waves-light btn red" type="button" (click)="VerificarEliminacion(p.id, p.nombre)">
+                    <i class="material-icons right">delete</i>
+                    Eliminar
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls
+                      (pageChange)="pagina = ($event)"
+                      previousLabel="Anterior"
+                      nextLabel="Siguiente"
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page">
+</pagination-controls>

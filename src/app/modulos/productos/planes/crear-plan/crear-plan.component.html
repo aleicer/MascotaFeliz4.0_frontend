@@ -1,1 +1,24 @@
-<p>crear-plan works!</p>
+<div class="row">
+    <h3 class="center-align">Crear Plan</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarPlan()" method="PUT" action="formulario-contacto.php">
+            <input type="hidden" formControlName="id" />
+            <div class="input-field">
+                <label>Tipo De Plan</label>
+                <i class="material-icons prefix">wc</i>
+                <select formControlName="nombre" class="browser-default col s3 green-text" required=""
+                    aria-required="true">
+                    <option value="bienestar">Bienestar</option>
+                    <option value="elite">Elite</option>
+                    <option value="diamante">Diamante</option>
+                </select>
+                <p class="center-align">
+                    <button [disabled]="!fgValidador.valid" class=" btn waves-effect waves-light btn" type="submit">
+                        <i class="material-icons right">send</i>
+                        Enviar
+                    </button>
+                    <a routerLink="/administracion/listar-empleados" class="btn btn-cancelar">Cancelar</a>
+                </p>
+        </form>
+    </article>
+</div>
