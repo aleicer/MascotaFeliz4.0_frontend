@@ -49,7 +49,7 @@
     font-family: 'Architects Daughter', cursive;
 }
 
-#servicio{
+.servicio{
     background-image: linear-gradient(to top, rgba(24, 78, 119, 1) 0%, rgba(33, 70, 99, 1) 100%);
 }
 
