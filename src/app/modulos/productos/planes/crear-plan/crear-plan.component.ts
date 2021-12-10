@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ModelPlan } from 'src/app/modelos/plan.model';
-import { PlanesService } from 'src/app/servicios/plan.service';
+import { PlanesService } from 'src/app/servicios/planes.service';
 
 @Component({
   selector: 'app-crear-plan',
@@ -11,7 +11,7 @@ import { PlanesService } from 'src/app/servicios/plan.service';
 })
 export class CrearPlanComponent implements OnInit {
   fgValidador: FormGroup = this.fb.group({
-    'nombres':['',[Validators.required]],
+    'nombre':['',[Validators.required]],
     'descripcion':['',[Validators.required]],
     'precio':['',[Validators.required]],
     });
@@ -25,8 +25,6 @@ export class CrearPlanComponent implements OnInit {
 
   GuardarPlan(){
     let c = new ModelPlan();
-    // let telefono = this.fgValidador.controls["telefono"].value;
-    // let documento = this.fgValidador.controls["documento"].value;
     c.nombre= this.fgValidador.controls["nombre"].value;
     c.descripcion = this.fgValidador.controls["descripcion"].value;
     c.precio = this.fgValidador.controls["precio"].value;
