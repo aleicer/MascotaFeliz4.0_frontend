@@ -7,9 +7,16 @@
                 <label for="nombre" class="active">Nombre</label>
                 <input formControlName="nombre" type="text" name="nombre" required>
             </div>
-            <div class="input-field">
+            <!-- <div class="input-field">
                 <label for="descripcion" class="active">Descripción</label>
                 <input formControlName="descripcion" type="text" name="descripcion" required>
+            </div> -->
+            <div class="input-field ">
+                <label for="descripcion" class="active">Descripción</label><br>
+                <textarea formControlName="descripcion" 
+                type="text" name="descripcion" 
+                required cols="1" rows="10">
+                </textarea>
             </div>
             <div class="input-field">
                 <label for="precio" class="active">Precio</label>
