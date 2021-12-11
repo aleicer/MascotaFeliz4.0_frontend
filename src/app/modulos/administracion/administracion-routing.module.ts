@@ -9,6 +9,9 @@ import { EditarEmpleadoComponent } from './empleados/editar-empleado/editar-empl
 import { BuscarMascotaComponent } from './mascotas/buscar-mascota/buscar-mascota.component';
 import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.component';
 import { EditarMascotaComponent } from './mascotas/editar-mascota/editar-mascota.component';
+import { BuscarPlanComponent } from './planes/buscar-plan/buscar-plan.component';
+import { CrearPlanComponent } from './planes/crear-plan/crear-plan.component';
+import { EditarPlanComponent } from './planes/editar-plan/editar-plan.component';
 
 const routes: Routes = [
   {
@@ -46,7 +49,20 @@ const routes: Routes = [
   {
     path: "editar-empleado/:id",
     component: EditarEmpleadoComponent 
+  },
+  {
+    path: "listar-planes",
+    component: BuscarPlanComponent
+  },
+  {
+    path: "crear-plan",
+    component: CrearPlanComponent
+  },
+  {
+    path: "editar-plan/:id",
+    component: EditarPlanComponent
   }
+
 ];
 
 @NgModule({
