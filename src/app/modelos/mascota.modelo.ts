@@ -18,5 +18,6 @@ export class ModeloMascota{
     foto?: string;
     clienteId?: string;
     planId?: string;
+    cliente?: ModeloCliente;
 
 }

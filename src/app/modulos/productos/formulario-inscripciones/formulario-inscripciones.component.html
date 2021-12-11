@@ -24,27 +24,28 @@
     <tbody>
         <tr *ngFor="let f of listadoSolicitudes">
             <td>
-                {{f.mascotaId}}
+                {{f.cliente?.nombre}} {{f.cliente?.apellido}}  
+            </td>
+                {{f.mascota?.nombre}}
+            <td>
+                {{f.mascota?.especie}}
             </td>
             <td>
-                {{f.mascotaId}}
+                {{f.mascota?.estadoAfiliacion}}
             </td>
             <td>
-               
+               {{f.observacionesCliente}}
             </td>
             <td>
-                {{f.observacionesCliente}}
+                {{f.empleadoId}}
             </td>
             <td>
-                {{f.observacionesEmpleado}}
-            </td>
-            <td>
-                <a class="btn">Editar mascota</a>
+                <a class="btn">Aceptar</a>
             </td>
             <td>
                 <button class="waves-effect waves-light btn red" type="button" >
                     <i class="material-icons right">delete</i>
-                    Eliminar
+                    Rechazar
                 </button>
             </td>
         </tr>

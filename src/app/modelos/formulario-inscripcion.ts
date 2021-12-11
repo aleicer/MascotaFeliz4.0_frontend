@@ -1,3 +1,4 @@
+import { ModeloCliente } from "./cliente.modelo";
 import { ModeloMascota } from "./mascota.modelo";
 
 export class ModelFormularioInscripcion{
@@ -5,6 +6,9 @@ export class ModelFormularioInscripcion{
     observacionesEmpleado?: string;
     observacionesCliente?: string;
     mascotaId?: string;
+    clienteId?: string;
     empleadoId?: string;
+    mascota?: ModeloMascota;
+    cliente?: ModeloCliente;
     
 }

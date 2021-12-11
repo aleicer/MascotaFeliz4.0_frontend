@@ -10,4 +10,7 @@ export class ModeloCliente{
     correo?: string;
     clave?: string;
     rolId?: string;
+    nombreCompleto(){
+        return this.nombre+ " " + this.apellido
+    }
 }

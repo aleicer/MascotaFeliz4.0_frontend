@@ -64,6 +64,7 @@ export class CrearMascotaComponent implements OnInit {
         f.mascotaId = datos.id;
         f.observacionesCliente = this.fgValidador.controls["observacionesCliente"].value;
         f.observacionesEmpleado = "Ninguna";
+        f.clienteId= this.servicioSeguridad.ObtenerId();
         this.servicioMascota.CrearFormularioInscripcion(f).subscribe((datos : ModelFormularioInscripcion)=>{//funcion con peticion post formulario Inscripcion 
           alert("Registro de Inscripcion guardado, te responderemos lo antes posible")
           this.router.navigate(["/administracion/listar-mascotas"]);//redireccionamos a la lista si todo funciono.

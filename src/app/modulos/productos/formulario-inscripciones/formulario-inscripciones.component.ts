@@ -16,6 +16,7 @@ export class FormularioInscripcionesComponent implements OnInit {
   listadoClientes: ModeloCliente[]=[];
   listadoMascotas: ModeloMascota[] =[];
   listadoSolicitudes: ModelFormularioInscripcion[]=[];
+  
 
   constructor(private formularioServicio: FormularioInscripcionService,
               private mascotaServicio: MascotaService,
@@ -23,45 +24,16 @@ export class FormularioInscripcionesComponent implements OnInit {
 
   ngOnInit(): void {
     this.OptenerListadoInscripciones()
-    this.optenerListadoMascotas()
-    this.optenerListadoClientes()
   }
   
   //OPTENEMOS LISTA DE FORMURIOS
   OptenerListadoInscripciones() {
-    this.formularioServicio.ObtenerRegistro().subscribe((datos: ModelFormularioInscripcion[])=>{
+    this.formularioServicio.ObtenerRegistro().subscribe((datos: ModelFormularioInscripcion[]) =>{
       this.listadoSolicitudes = datos;
+    },(Error)=>{
+      alert("No es posible optener la lista")
     })
-   }
-
-   //OPTENEMOS LISTA DE MASCOTAS
-   optenerListadoMascotas(){
-      this.mascotaServicio.ObtenerRegistros().subscribe((datos:ModeloMascota[])=>{
-        this.listadoMascotas = datos;
-      })
-   }
-
-   //OPTENEMOS LISTA DE CLIENTES
-   optenerListadoClientes(){
-    this.clienteServicio.ObtenerRegistro().subscribe((datos:ModeloCliente[])=>{
-      this.listadoClientes = datos;
-    })
- }
-
-   OptenerAmo(mascotaId: string){
-     let nombreCliente = " ";
-     for (let mascota of this.listadoMascotas){
-        if(mascota.id == mascotaId){
-          for(let cliente of this.listadoClientes){
-            if(cliente.id == mascota.clienteId){
-              nombreCliente = cliente.nombre +" "+cliente.apellido;
-              
-            }
-          }
-        }
-        
-     }
-     return nombreCliente
    }
 
 }
+
