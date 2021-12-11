@@ -4,6 +4,7 @@ body > app-root{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-image: linear-gradient(to top, rgba(165, 165, 164, 0.6) 0%, rgba(181, 182, 179, 0.6) 150%);
   }
 
   main {
