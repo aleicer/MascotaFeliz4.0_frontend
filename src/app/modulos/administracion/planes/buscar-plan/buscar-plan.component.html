@@ -1,0 +1,48 @@
+<a routerLink="/administracion/crear-plan" class="btn">Nuevo plan</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Editar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros | paginate: { itemsPerPage: 5, currentPage: pagina }">
+            <td>
+                {{p.nombre}}
+            </td>
+            <td style="width: 40% !important;">
+                {{p.descripcion}}
+            </td>
+            <td>
+                {{p.precio}}
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-plan/{{p.id}}" class="btn">Editar plan</a>
+            </td>
+            <td>
+                <button class="waves-effect waves-light btn red" type="button" (click)="VerificarEliminacion(p.id, p.nombre)">
+                    <i class="material-icons right">delete</i> Eliminar
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls
+                      (pageChange)="pagina = ($event)"
+                      previousLabel="Anterior"
+                      nextLabel="Siguiente"
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page">
+</pagination-controls>

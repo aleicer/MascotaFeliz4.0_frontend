@@ -18,6 +18,11 @@ import { BuscarEmpleadoComponent } from './empleados/buscar-empleado/buscar-empl
 import { CrearEmpleadoComponent } from './empleados/crear-empleado/crear-empleado.component';
 import { EditarEmpleadoComponent } from './empleados/editar-empleado/editar-empleado.component';
 import { EliminarEmpleadoComponent } from './empleados/eliminar-empleado/eliminar-empleado.component';
+import { PlanesComponent } from './planes/planes.component';
+import { BuscarPlanComponent } from './planes/buscar-plan/buscar-plan.component';
+import { CrearPlanComponent } from './planes/crear-plan/crear-plan.component';
+import { EditarPlanComponent } from './planes/editar-plan/editar-plan.component';
+import { EliminarPlanComponent } from './planes/eliminar-plan/eliminar-plan.component';
 
 
 @NgModule({
@@ -35,7 +40,12 @@ import { EliminarEmpleadoComponent } from './empleados/eliminar-empleado/elimina
     BuscarEmpleadoComponent,
     CrearEmpleadoComponent,
     EditarEmpleadoComponent,
-    EliminarEmpleadoComponent
+    EliminarEmpleadoComponent,
+    PlanesComponent,
+    BuscarPlanComponent,
+    CrearPlanComponent,
+    EditarPlanComponent,
+    EliminarPlanComponent
   ],
   imports: [
     CommonModule,

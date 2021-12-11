@@ -9,7 +9,7 @@ import { PiePaginaComponent } from './nav-footer/pie-pagina/pie-pagina.component
 import { ErrorComponent } from './nav-footer/error/error.component';
 import { InicioComponent } from './nav-footer/inicio/inicio.component';
 import {  FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -20,7 +20,7 @@ import {HttpClientModule} from '@angular/common/http'
     BarraNavegacionComponent,
     PiePaginaComponent,
     ErrorComponent,
-    InicioComponent
+    InicioComponent,
   ],
   imports: [
     BrowserModule,
