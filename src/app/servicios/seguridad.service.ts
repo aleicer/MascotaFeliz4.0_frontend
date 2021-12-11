@@ -107,4 +107,13 @@ export class SeguridadService {
       return "";
     }
   }
+  ObtenerCorreo(){
+    let datosString = localStorage.getItem("datosSesion");
+    if(datosString){
+      let datos = JSON.parse(datosString)
+      return datos.datos.correo;
+    }else{
+      return "";
+    }
+  }
 }

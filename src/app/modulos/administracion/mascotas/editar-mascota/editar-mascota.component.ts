@@ -19,6 +19,7 @@ id: string = '';
     'color': ['', [Validators.required]],
     'sexo': ['', [Validators.required]],
     'fechaNac': ['', [Validators.required]],
+    'seniales': ['', [Validators.required]],
     'peso': ['', [Validators.required]],
     'enfermedades': ['', [Validators.required]],
     'foto': ['', [Validators.required]]
@@ -43,6 +44,7 @@ id: string = '';
       this.fgValidador.controls["color"].setValue(datos.color);
       this.fgValidador.controls["sexo"].setValue(datos.sexo);
       this.fgValidador.controls["fechaNac"].setValue(datos.fechaNac);
+      this.fgValidador.controls["seniales"].setValue(datos.seniales);
       this.fgValidador.controls["peso"].setValue(datos.peso);
       this.fgValidador.controls["enfermedades"].setValue(datos.enfermedades);
       this.fgValidador.controls["foto"].setValue(datos.foto);
@@ -56,7 +58,8 @@ id: string = '';
     let color = this.fgValidador.controls["color"].value;
     let sexo = this.fgValidador.controls["sexo"].value;
     let fechaNac = this.fgValidador.controls["fechaNac"].value;
-    let peso = parseInt(this.fgValidador.controls["peso"].value);
+    let seniales = this.fgValidador.controls["seniales"].value;
+    let peso = this.fgValidador.controls["peso"].value;
     let enfermedades = this.fgValidador.controls["enfermedades"].value;
     let foto = this.fgValidador.controls["foto"].value;
     let p = new ModeloMascota();
@@ -66,6 +69,7 @@ id: string = '';
     p.color = color;
     p.sexo = sexo;
     p.fechaNac = fechaNac;
+    p.seniales = seniales;
     p.peso = peso;
     p.enfermedades = enfermedades;
     p.foto = foto;

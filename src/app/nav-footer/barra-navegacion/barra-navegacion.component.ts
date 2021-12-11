@@ -13,7 +13,9 @@ export class BarraNavegacionComponent implements OnInit {
   rol: number= 0;
   seInicioSesion : boolean= false;
   subs : Subscription = new Subscription();
-  constructor(private seguridadServicio : SeguridadService) { }
+  usuario: any = "";
+  constructor(private seguridadServicio : SeguridadService,
+              private servicioSeguridad: SeguridadService) { }
 
   ngOnInit(): void {
     this.subs = this.seguridadServicio.OptenerDatosUsuarioEnSesion().subscribe((datos: ModeloIdentificacion) =>{
@@ -21,12 +23,15 @@ export class BarraNavegacionComponent implements OnInit {
       switch(datos.datos?.rol){
         case "619511b6fda2f8337ccf426c":
           this.rol= 1; //IDENTIFICACION DE ADMINISTRADOR
+          this.usuario = datos.datos.correo
           break;
         case "619511c4fda2f8337ccf426d":
           this.rol= 2;//IDENTIFICACION DE EMPLEADO
+          this.usuario = datos.datos.correo
           break;
         case "619511d0fda2f8337ccf426e":
           this.rol= 3;//IDENTIFICACION DE CLIENTE
+          this.usuario = datos.datos.correo
           break;
         default:
           this.rol= 0; //sin ningun inicio de sesion 

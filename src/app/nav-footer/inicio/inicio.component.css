@@ -295,3 +295,45 @@
 }
 }
 
+.interrogacion {
+    position: sticky;
+}
+
+    .interrogacion img {
+        position: initial;
+        bottom: 10px;
+        top: 250px;
+        right: 0px;
+        width: 300px;
+        animation: movimiento 6s ease-in-out infinite;
+     
+    }
+
+@keyframes movimiento {
+    0% {
+        transform: translateX(12px);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(7%);
+    }
+}
+.lateralmov {
+    position: sticky;
+}
+
+    .lateralmov img {
+        position: initial;
+        bottom: 10px;
+        top: 150px;
+        right: 0px;
+        width: 550px;
+        animation: movimiento 6s ease-in-out infinite;
+     
+    }
+
+
